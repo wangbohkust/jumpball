@@ -8,34 +8,37 @@
 
 import SpriteKit
 
+// the scene of game preparation
 class GameScene: SKScene {
+    
+    // everything on the scene is spritenode
+    let playButton = SKSpriteNode(imageNamed: "play")
+    
+    // called when one scene move to view and start
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
-        self.addChild(myLabel)
+        // set button position to be center of frame by using CGPoint
+        self.playButton.position = CGPointMake(CGRectGetMidX(self.frame),CGRectGetMidY(self.frame))
+        self.addChild(playButton)
+        self.backgroundColor = UIColor(hex: 0x80D9FF)
     }
     
+    // called when someone touch the screen
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
-        
         for touch: AnyObject in touches {
+            // touch the node which stands for scene
             let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+            // check the object on corresponding location
+            if self.nodeAtPoint(location) == self.playButton{
+                // construct a new scene and grab current view
+                var scene = PlayScene(size: self.size)
+                let skView = self.view as SKView!
+                skView?.ignoresSiblingOrder = true
+                scene.scaleMode = .ResizeFill
+                scene.size = skView.bounds.size
+                // current view present new scene
+                skView.presentScene(scene)
+            }
         }
     }
    

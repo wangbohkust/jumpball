@@ -15,6 +15,9 @@
 		2D209C971A6A137E00E98F4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D209C961A6A137E00E98F4A /* Images.xcassets */; };
 		2D209C9A1A6A137E00E98F4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D209C981A6A137E00E98F4A /* LaunchScreen.xib */; };
 		2D209CA61A6A137E00E98F4A /* jumpballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D209CA51A6A137E00E98F4A /* jumpballTests.swift */; };
+		2D209CB01A6A192900E98F4A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D209CAF1A6A192900E98F4A /* UIColorExtension.swift */; };
+		2D209CB21A6A1CA500E98F4A /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D209CB11A6A1CA500E98F4A /* PlayScene.swift */; };
+		2D7FAC6A1A6A326600F5447E /* BlockStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FAC691A6A326600F5447E /* BlockStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		2D209C9F1A6A137E00E98F4A /* jumpballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jumpballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D209CA41A6A137E00E98F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D209CA51A6A137E00E98F4A /* jumpballTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jumpballTests.swift; sourceTree = "<group>"; };
+		2D209CAF1A6A192900E98F4A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		2D209CB11A6A1CA500E98F4A /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScene.swift; sourceTree = "<group>"; };
+		2D7FAC691A6A326600F5447E /* BlockStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +89,15 @@
 			children = (
 				2D209C8B1A6A137E00E98F4A /* AppDelegate.swift */,
 				2D209C8D1A6A137E00E98F4A /* GameScene.sks */,
-				2D209C8F1A6A137E00E98F4A /* GameScene.swift */,
 				2D209C911A6A137E00E98F4A /* GameViewController.swift */,
 				2D209C931A6A137E00E98F4A /* Main.storyboard */,
 				2D209C961A6A137E00E98F4A /* Images.xcassets */,
 				2D209C981A6A137E00E98F4A /* LaunchScreen.xib */,
 				2D209C891A6A137E00E98F4A /* Supporting Files */,
+				2D209CAF1A6A192900E98F4A /* UIColorExtension.swift */,
+				2D209CB11A6A1CA500E98F4A /* PlayScene.swift */,
+				2D209C8F1A6A137E00E98F4A /* GameScene.swift */,
+				2D7FAC691A6A326600F5447E /* BlockStatus.swift */,
 			);
 			path = jumpball;
 			sourceTree = "<group>";
@@ -220,8 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D209C901A6A137E00E98F4A /* GameScene.swift in Sources */,
+				2D7FAC6A1A6A326600F5447E /* BlockStatus.swift in Sources */,
+				2D209CB21A6A1CA500E98F4A /* PlayScene.swift in Sources */,
 				2D209C921A6A137E00E98F4A /* GameViewController.swift in Sources */,
 				2D209C8C1A6A137E00E98F4A /* AppDelegate.swift in Sources */,
+				2D209CB01A6A192900E98F4A /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +427,7 @@
 				2D209CAB1A6A137E00E98F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D209CAC1A6A137E00E98F4A /* Build configuration list for PBXNativeTarget "jumpballTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +436,7 @@
 				2D209CAE1A6A137E00E98F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
